@@ -1,2 +1,11 @@
 .env
 *.env
+
+# App (WIP — not included in submission)
+main.py
+test_scores.py
+check_scores.py
+
+# Python cache
+__pycache__/
+*.pyc

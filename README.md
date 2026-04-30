@@ -86,25 +86,11 @@ Users who triggered their first AI generation within 3 days of signup converted 
 
 ---
 
-## Bonus — What-If Upgrade Probability Simulator
-
-An interactive Streamlit app (`main.py`) that lets you adjust user behaviour sliders and see the model's upgrade probability in real time. Built for demo and product intuition.
-
-```bash
-conda activate zerve-odsc
-streamlit run main.py
-```
-
-Persona presets included: Casual, Explorer, Heavy AI User (upgrader profile), Power AI User, At Risk.
-
----
-
 ## Repository Structure
 
 ```
 .
 ├── t1.ipynb                        # Main analysis notebook
-├── main.py                         # Streamlit What-If Simulator
 ├── datasets/
 │   ├── zerve_events.csv            # Raw event log (3.5M rows, 83 columns)
 │   └── data_dictionary.csv         # Column descriptions, types, null rates
@@ -120,10 +106,9 @@ Persona presets included: Casual, Explorer, Heavy AI User (upgrader profile), Po
 
 ```bash
 conda activate zerve-odsc
-pip install streamlit   # if not already installed
 ```
 
-Run the notebook end-to-end to regenerate the model, then launch the app.
+Run the notebook end-to-end to regenerate all outputs and the trained model.
 
 ---
 
