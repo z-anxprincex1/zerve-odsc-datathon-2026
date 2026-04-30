@@ -1,8 +1,8 @@
 .env
 *.env
 
-# App (WIP — not included in submission)
-main.py
+# Root-level scratch files
+/main.py
 test_scores.py
 check_scores.py
 
@@ -13,3 +13,6 @@ __pycache__/
 
 # Matplotlib cache
 reports/matplotlib-cache/
+
+# Runtime-generated caches (rebuild locally with build_cache.py)
+funnel_command_center/command_center_user_features.pkl
