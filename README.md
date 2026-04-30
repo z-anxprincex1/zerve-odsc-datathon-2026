@@ -86,19 +86,46 @@ Users who triggered their first AI generation within 3 days of signup converted 
 
 ---
 
-## Repository Structure
+## File Reference
 
-```
-.
-├── t1.ipynb                        # Main analysis notebook
-├── datasets/
-│   ├── zerve_events.csv            # Raw event log (3.5M rows, 83 columns)
-│   └── data_dictionary.csv         # Column descriptions, types, null rates
-└── reports/
-    ├── xgb_model.pkl               # Trained XGBoost model
-    ├── feature_cols.pkl            # Feature column list (43 features)
-    └── event_type_upgrade_report.csv
-```
+### Root
+
+| File | Description |
+|---|---|
+| `t1.ipynb` | Main analysis notebook — runs end-to-end from raw data to trained model, funnel, insights, and all visualisations |
+| `requirements.txt` | Python dependencies |
+| `README.md` | This file |
+
+### `datasets/`
+
+| File | Description |
+|---|---|
+| `zerve_events.csv` | Raw event log — 3,509,628 rows, 83 columns, one row per product event |
+| `data_dictionary.csv` | Column reference: data types, null rates, descriptions, and sample values for all 83 columns |
+
+### `reports/`
+
+| File | Description |
+|---|---|
+| `xgb_model.pkl` | Trained XGBoost binary classifier (serialised with joblib) |
+| `feature_cols.pkl` | Ordered list of the 43 feature column names used by the model |
+| `event_type_upgrade_report.csv` | Pre-ranked table of all 227 event types scored by commercial intent, leakage risk, and upgrade signal strength |
+| `event_type_upgrade_report.md` | Markdown version of the event type report |
+| `data_dictionary_notes.md` | Annotated notes on key data quirks and gotchas discovered during exploration |
+| `zerve_upgrade_prediction_project_report.pdf` | Full project report PDF |
+| `fig1_model_performance.png` | ROC-AUC and PR-AUC curves across 5-fold cross-validation |
+| `fig2_feature_importance.png` | Top-20 feature importances averaged across folds |
+| `fig3_funnel_chart.png` | Deterministic user funnel — stage counts as of dataset end date |
+| `fig4_insight1_ai_usage.png` | AI generation count distribution: upgraders vs non-upgraders |
+| `fig5_daily_trend.png` | Daily event volume trend over the observation period |
+| `fig6_retention_heatmap.png` | Retention cohort heatmap (Day-0 through Day-30) |
+| `fig7_segmentation.png` | Upgrade rate segmentation by user persona |
+| `fig8_distribution.png` | Total events and active days distribution: upgraders vs non-upgraders |
+| `fig9a_shap_beeswarm.png` | SHAP beeswarm plot — per-user feature impact on upgrade probability |
+| `fig9b_shap_bar.png` | SHAP bar plot — mean absolute feature importance |
+| `fig10_risk_tiers.png` | Upgrade risk tier distribution across the user base |
+| `fig11_transition_matrix.png` | Stage transition matrix (T−30 → T−now) |
+| `fig12_time_to_stage.png` | Median days for users to reach each funnel stage |
 
 ---
 

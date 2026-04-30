@@ -9,3 +9,7 @@ check_scores.py
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+
+# Matplotlib cache
+reports/matplotlib-cache/
